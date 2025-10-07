@@ -1,7 +1,28 @@
 import { useEffect, useState } from "react";
 
+export type GlobalData = {
+  total_market_cap: {
+    usd: number;
+    [key: string]: number;
+  };
+  total_volume: {
+    usd: number;
+    [key: string]: number;
+  };
+  market_cap_percentage: {
+    btc: number;
+    eth: number;
+    [key: string]: number;
+  };
+  market_cap_change_percentage_24h_usd: number;
+  updated_at: number;
+};
+
+export type GlobalResponse = {
+  data: GlobalData;
+};
 export default function GlobalStats() {
-  const [global, setGlobal] = useState(null);
+  const [global, setGlobal] = useState<GlobalData>();
 
   useEffect(() => {
     const fetchGlobal = async () => {

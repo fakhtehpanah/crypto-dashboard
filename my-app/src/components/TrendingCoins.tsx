@@ -1,7 +1,17 @@
 import { useEffect, useState } from "react";
 
+interface TrendingData {
+  item: {
+    id: string;
+    name: string;
+    symbol: string;
+    small: string;
+    market_cap_rank: number;
+  };
+}
+
 export default function TrendingCoins() {
-  const [trending, setTrending] = useState([]);
+  const [trending, setTrending] = useState<TrendingData[]>([]);
 
   useEffect(() => {
     const fetchTrending = async () => {

@@ -1,7 +1,16 @@
 import React, { useEffect, useState } from 'react'
 
+interface MarketData {
+    id: string,
+    symbol: string,
+    name: string,
+    image: string,
+    current_price: number,
+    market_cap: number
+}
+
 function MarketTable() {
-    const [markets, setMarkets] = useState([]);
+    const [markets, setMarkets] = useState<MarketData[]>([]);
 
     useEffect(() => {
         const fetchMarkets = async () => {
