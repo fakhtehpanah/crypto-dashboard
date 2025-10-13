@@ -6,7 +6,7 @@ export default  function Home() {
 
 
   return (
-      <div className="">
+      <div className="bg-gray-800 p-5">
         {/* <MarketTable /> */}
         <CoinSelector/>
         {/* <TrendingCoins/> */}
