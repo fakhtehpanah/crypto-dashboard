@@ -55,7 +55,7 @@ export default function MarketTable() {
   }, [selectedCoin]);
 
   return (
-    <div className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 p-8 rounded-3xl shadow-2xl max-w-3xl text-white space-y-8">
+    <div className="p-8  text-white space-y-8">
       <h2 className="text-3xl font-bold text-center">💰 Market Overview</h2>
 
       <div className="flex justify-center">
@@ -74,7 +74,7 @@ export default function MarketTable() {
       </div>
 
       {selectedCoin && (
-        <div className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-3xl shadow-xl text-white space-y-5 p-6">
+        <div className=" bg-gray-800 rounded-3xl shadow-xl text-white space-y-5 p-6">
           {loading || !global ? (
             <p className="text-center animate-pulse text-gray-300">Loading...</p>
           ) : (

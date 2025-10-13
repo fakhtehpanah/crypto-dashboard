@@ -27,7 +27,7 @@ export default function TrendingCoins() {
   }, []);
 
   return (
-    <div className="bg-gray-900 rounded-3xl p-6 mb-8 shadow-xl">
+    <div className=" p-8">
       <h2 className="text-2xl font-bold mb-6 text-white text-center">
         🔥 Trending Coins
       </h2>
@@ -35,7 +35,7 @@ export default function TrendingCoins() {
         {trending.map((coin) => (
           <div
             key={coin.item.id}
-            className="bg-gradient-to-br from-gray-800 to-gray-700 rounded-2xl p-4 text-center hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer"
+            className="rounded-2xl p-4 text-center hover:scale-105 hover:shadow-2xl transition-all duration-300 cursor-pointer"
           >
             <img
               src={coin.item.small}

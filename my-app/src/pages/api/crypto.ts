@@ -5,7 +5,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method === "GET") {
     try {
       const response = await fetch(
-        "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&per_page=10&page=1"
+        "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd"
       )
       const data = await response.json();
       res.status(200).json(data);
